@@ -77,11 +77,6 @@ button:hover {
   margin-right: 15px;
   gap: 5px;
 }
-/*a:link,
-a:visited {
-  color: rgb(255, 0, 200);
-  text-decoration: none;
-}*/
 
 nav ul li{
   list-style-type: none;
