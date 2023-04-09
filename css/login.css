@@ -1,6 +1,6 @@
 body {
   background-color: #f4f4f4;
-  background-image: url("../images/login_blurred_bg.jpg");
+  background-image: url("../images/back.jpg");
   height: 100%;
   width: 100%;
   margin: 0%;
@@ -39,7 +39,7 @@ input[type="password"] {
 }
 
 button {
-  background-color: red;
+  background-color: black;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -77,8 +77,36 @@ button:hover {
   margin-right: 15px;
   gap: 5px;
 }
-a:link,
+/*a:link,
 a:visited {
-  color: red;
+  color: rgb(255, 0, 200);
   text-decoration: none;
+}*/
+
+nav ul li{
+  list-style-type: none;
+  display:inline-block;
+  padding:10px 30px;
+}
+nav ul li a{
+  color:white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: right;
+}
+h1{padding-right: 400px;
+color: white;}
+nav ul li a:hover{
+  color:rgb(255, 0, 200);
+}
+span{
+  color:rgb(255, 0, 200);
+}
+nav
+{ background-color: rgba(2, 2, 15, 0.527);  }
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
