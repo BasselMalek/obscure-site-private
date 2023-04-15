@@ -15,6 +15,7 @@ body {
 
 nav {
   background-color: rgba(2, 2, 15, 0.3);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -220,14 +221,18 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/login_blurred_bg.jpg");
-  height: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 300px;
 }
 
 .carousel-section h3 {
   font-weight: bold;
   font-size: 24px;
   color: #cc00a0ff;
+}
+
+.wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/tv.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -1,0 +1,90 @@
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.col {
+  margin: 0 10px;
+}
+.grid-container img {
+  height: 400px;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  background-color: #111111;
+  margin: 0%;
+}
+
+nav {
+  background-color: rgba(2, 2, 15, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.expanded-nav a {
+  font-weight: bold;
+  font-size: 32px;
+  text-decoration: none;
+  color: #d1ccdcff;
+}
+.expanded-nav span {
+  color: #cc00a0ff;
+}
+
+.expanded-nav .fa-solid,
+.fa-regular {
+  color: #cc00a0ff;
+}
+
+.expanded-nav-icons {
+  display: flex;
+  gap: 15px;
+}
+.expanded-nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.intro-section .intro-text-wrapper {
+  color: #ffffff;
+  padding-left: 25px;
+}
+.intro-section .intro-text-wrapper h1 {
+  margin-left: -5px;
+  font-weight: bolder;
+  font-size: 64px;
+}
+
+.intro-section .intro-text-wrapper p {
+  max-width: 440px;
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/movies.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
