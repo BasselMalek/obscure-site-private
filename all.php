@@ -12,10 +12,10 @@
     <nav>
         <ul>
             <li><h1>Movies <span>World</span></h1></li>
-            <li><a href="all.html">All</a></li>
-            <li> <a href="movies.html">Movies</a></li>
-            <li><a href="tvshows.html">TV shows</a></li>
-            <li class="contact"><a href="contact.html">Contact Us</a></li>
+            <li><a href="all.php">All</a></li>
+            <li><a href="movies.php">Movies</a></li>
+            <li><a href="tvshows.php">TV shows</a></li>
+            <li><a href="feedback.php">feedback</a></li>
          </ul>
     </nav>
 </body>

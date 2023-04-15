@@ -28,7 +28,8 @@ form {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -89,7 +90,7 @@ nav ul li a{
   font-weight: bold;
   text-align: right;
 }
-h1{padding-right: 400px;
+h1{padding-right: 20px;
 color: white;}
 nav ul li a:hover{
   color:rgb(255, 0, 200);
@@ -104,4 +105,15 @@ nav
   margin:0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.reg {
+  text-decoration: none ;
+  color:rgb(255, 0, 200);
+  justify-content: center;
+  display:flex;
+}
+.H{
+  position: fixed;
+  right: 20px;
+  top: 12px;
 }
