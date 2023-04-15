@@ -30,11 +30,17 @@
                     <label for="email">E-mail:</label><br>
                     <input type="email" id="email" name="email" required>
 
+                    <label for="gender">Gender:</label><br>
+                    <input type="radio" id="gender" name="gender" required value ="male">
+                    <label for="gender">Male</label>
+                    <br>
+                    <input type="radio" id="gender" name="gender" required value ="female">
+                    <label for="gender">Female</label><br>
+                    
                     <button type="submit">register</button>
                     <a href ="login.php" class="reg"> Already have an account? </a>
                 </form>
             </div> 
-
         </div>
 </body>
 </html>

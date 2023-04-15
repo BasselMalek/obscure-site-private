@@ -12,7 +12,7 @@
     <nav>
         <ul>
             <li><h1>Movies <span>World</span></h1></li>
-            <li><a href="all.php">All</a></li>
+            <li><a href="all.php" class ="clicked">All</a></li>
             <li><a href="movies.php">Movies</a></li>
             <li><a href="tvshows.php">TV shows</a></li>
             <li><a href="feedback.php">feedback</a></li>

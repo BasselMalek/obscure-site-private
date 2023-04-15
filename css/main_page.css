@@ -32,4 +32,7 @@ body {
   }
   nav
   { background-color: rgba(2, 2, 15, 0.527);  }
+  .clicked{
+    color:rgb(255, 0, 200);
+  }
  
