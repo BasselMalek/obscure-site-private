@@ -151,12 +151,12 @@ INSERT INTO series_actors (series_id, actor_id) VALUES
 INSERT INTO series_genres (series_id, genre_id) VALUES
     (1, 3),
     (2, 3),
-    (3, 6);
-    (4, 7);
-    (5, 3);
-    (6, 1);
-    (7, 8);
-    (8, 3);
-    (9, 3);
+    (3, 6),
+    (4, 7),
+    (5, 3),
+    (6, 1),
+    (7, 8),
+    (8, 3),
+    (9, 3),
     (10, 3);
 
