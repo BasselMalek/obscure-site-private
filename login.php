@@ -29,7 +29,7 @@
 
                     <button type="submit">Login</button>
                     <a href ="register.php" class="reg"> Don't have acount ? register first !</a>
-                    <a href ="all.html" class="reg"> continue as Guest</a>
+                    <a href ="all.php" class="reg"> continue as Guest</a>
                 </form>
             </div>
         </div>
