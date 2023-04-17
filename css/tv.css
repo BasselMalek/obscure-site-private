@@ -85,7 +85,7 @@ body {
 nav ul li{
   list-style-type: none;
   display:inline-block;
-  padding:10px 30px;
+  padding:10px 20px;
 }
 nav ul li a{
   color:white;
@@ -93,7 +93,7 @@ nav ul li a{
   font-weight: bold;
   text-align: right;
 }
-.title{padding-right: 300px;
+.title{padding-right: 400px;
 color: white;}
 nav ul li a:hover{
   color:rgb(255, 0, 200);
@@ -112,7 +112,7 @@ nav
 
 .button-solid {
   border: none;
-  background-color: rgba(2, 2, 15, 0.527);
+  background-color: transparent;
   font-size:27px;
   color: white;
 }
