@@ -93,7 +93,7 @@ nav ul li a{
   font-weight: bold;
   text-align: right;
 }
-.title{padding-right: 500px;
+.title{padding-right: 300px;
 color: white;}
 nav ul li a:hover{
   color:rgb(255, 0, 200);
@@ -103,10 +103,21 @@ span{
 }
 nav
 { background-color: rgba(2, 2, 15, 0.413);
-  padding:0%  }
+  padding:0%;
+  display:flex;
+ }
 .clicked{
   color:rgb(255, 0, 200);
 }
 
-
+.button-solid {
+  border: none;
+  background-color: rgba(2, 2, 15, 0.527);
+  font-size:27px;
+  color: white;
+}
+button-solid:focus {
+  border: none;
+  outline: none;
+}
 
