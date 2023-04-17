@@ -38,7 +38,7 @@
                     <label for="gender">Female</label><br>
                     
                     <button type="submit">register</button>
-                    <a href ="login.html" class="reg"> Already have an account? </a>
+                    <a href ="login.php" class="reg"> Already have an account? </a>
                 </form>
             </div> 
         </div>

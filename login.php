@@ -26,12 +26,3 @@
 
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
-
-                    <button type="submit">Login</button>
-                    <a href ="register.html" class="reg"> Don't have acount ? register first !</a>
-                    <a href ="index.html" class="reg"> continue as Guest</a>
-                </form>
-            </div>
-        </div>
-</body>
-</html>
