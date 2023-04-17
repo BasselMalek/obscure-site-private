@@ -28,10 +28,19 @@
                     <li><a href="movies.html">Movies</a></li>
                     <li><a href="tvshows.html">TV shows</a></li>
                     <li><a href="feedback.html">feedback</a></li>
-                    <li><span class="material-symbols-outlined" style="color:white;">
-                        search
-                        <a href="index.html"></a>
-                     </span>
+                    <li>
+                        <form action="search.html">
+                            <button  class="button-solid">
+                                <span class="material-symbols-outlined" style="color:white;">
+                                   search
+                                   <a href="search.html"></a>
+                                </span>
+                           </button>
+                        </form>
+                    </li>
+                    <li> <form action="user_page.html">
+                       <button class="button-solid"><i class="material-icons">account_circle</i></button>
+                       </form>
                     </li>
                     <li> <form action="index.html">
                     <button class="button-solid"><i class="material-icons">account_circle</i></button>

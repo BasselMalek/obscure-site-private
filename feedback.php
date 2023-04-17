@@ -23,6 +23,7 @@
                     <button class="button-solid">
                         <span class="material-symbols-outlined" style="color:white;">
                            search
+                           <a href="search.html"></a>
                         </span>
                     </button>
                 </form>

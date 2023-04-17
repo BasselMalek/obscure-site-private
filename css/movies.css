@@ -33,7 +33,6 @@ nav {
   padding: 10px;
 }
 
-
 .expanded-nav-icons {
   display: flex;
   gap: 15px;
@@ -69,61 +68,65 @@ nav {
   background-size: cover;
 }
 
-.backimage{background-image: url("../images/moviesback.jpg");
+.backimage {
+  background-image: url("../images/moviesback.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.intro-text-wrapper{color:white;}
+.intro-text-wrapper {
+  color: white;
+}
 
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background-color:rgba(0, 0, 0, 0.89);
+  background-color: rgba(0, 0, 0, 0.89);
   height: 100%;
   width: 100%;
   margin: 0%;
   font-family: Arial, sans-serif;
 }
-nav ul li{
+nav ul li {
   list-style-type: none;
-  display:inline-block;
-  padding:10px 30px;
+  display: inline-block;
+  padding: 10px 30px;
 }
-nav ul li a{
-  color:white;
+nav ul li a {
+  color: white;
   text-decoration: none;
   font-weight: bold;
   text-align: right;
 }
-.title{padding-right: 300px;
-color: white;}
-nav ul li a:hover{
-  color:rgb(255, 0, 200);
+.title {
+  padding-right: 300px;
+  color: white;
 }
-span{
-  color:rgb(255, 0, 200);
+nav ul li a:hover {
+  color: rgb(255, 0, 200);
 }
-nav
-{ background-color: rgba(2, 2, 15, 0.413);
-  padding:0%;
-  display: flex;  }
-.clicked{
-  color:rgb(255, 0, 200);
+span {
+  color: rgb(255, 0, 200);
+}
+nav {
+  background-color: rgba(2, 2, 15, 0.413);
+  padding: 0%;
+  display: flex;
+}
+.clicked {
+  color: rgb(255, 0, 200);
 }
 .button-solid {
   border: none;
-  background-color: rgba(2, 2, 15, 0.527);
-  font-size:27px;
+  background-color: transparent;
+  font-size: 27px;
   color: white;
 }
 button-solid:focus {
   border: none;
   outline: none;
 }
-
-
