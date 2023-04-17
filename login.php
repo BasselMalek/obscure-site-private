@@ -13,7 +13,7 @@
     <nav>
         <ul>
             <li><h1>Movies <span>World</span></h1></li>
-            <li><a href="all.php" class ="H">Home page</a></li>
+            <li><a href="all.html" class ="H">Home page</a></li>
          </ul>
     </nav>
         <div class="background"></div>
@@ -26,12 +26,3 @@
 
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
-
-                    <button type="submit">Login</button>
-                    <a href ="register.php" class="reg"> Don't have acount ? register first !</a>
-                    <a href ="all.php" class="reg"> continue as Guest</a>
-                </form>
-            </div>
-        </div>
-</body>
-</html>
