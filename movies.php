@@ -23,21 +23,21 @@
                 <nav class="expanded-nav">
                     <ul>
                         <li><h1 class="title">Movies <span>World</span></h1></li>
-                        <li><a href="index.html" >All</a></li>
-                        <li><a href="movies.html" class ="clicked">Movies</a></li>
-                        <li><a href="tvshows.html">TV shows</a></li>
-                        <li><a href="feedback.html">feedback</a></li>
+                        <li><a href="index.php" >All</a></li>
+                        <li><a href="movies.php" class ="clicked">Movies</a></li>
+                        <li><a href="tvshows.php">TV shows</a></li>
+                        <li><a href="feedback.php">feedback</a></li>
                         <li>
-                            <form action="search.html">
+                            <form action="search.php">
                                 <button  class="button-solid">
                                     <span class="material-symbols-outlined" style="color:white;">
                                        search
-                                       <a href="search.html"></a>
+                                       <a href="search.php"></a>
                                     </span>
                                </button>
                             </form>
                         </li>
-                        <li> <form action="user_page.html">
+                        <li> <form action="user_page.php">
                            <button class="button-solid"><i class="material-icons">account_circle</i></button>
                            </form>
                         </li>
