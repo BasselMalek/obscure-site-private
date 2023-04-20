@@ -1,28 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+session_start(); 
+include "db_conn.php";
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <title>Movies world</title>
-</head>
+if (isset($_POST['uname']) && isset($_POST['password'])) {
 
-<body>
-    <nav>
-        <ul>
-            <li><h1>Movies <span>World</span></h1></li>
-            <li><a href="all.php" class ="H">Home page</a></li>
-         </ul>
-    </nav>
-        <div class="background"></div>
-        <div class="formflex">
-            <div class="formwrap">
-                <form action="process-login.php" method="POST">
-                    <h2>Login</h2>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
+	function validate($data){
+       $data = trim($data);
+	   $data = stripslashes($data);
+	   $data = htmlspecialchars($data);
+	   return $data;
+	}
 
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+	$uname = validate($_POST['uname']);
+	$pass = validate($_POST['password']);
+
+	if (empty($uname)) {
+		header("Location: index.php?error=User Name is required");
+	    exit();
+	}else if(empty($pass)){
+        header("Location: index.php?error=Password is required");
+	    exit();
+	}else{
+		// hashing the password
+        $pass = md5($pass);
+
+        
+		$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
+
+		$result = mysqli_query($conn, $sql);
+
+		if (mysqli_num_rows($result) === 1) {
+			$row = mysqli_fetch_assoc($result);
+            if ($row['user_name'] === $uname && $row['password'] === $pass) {
+            	$_SESSION['user_name'] = $row['user_name'];
+            	$_SESSION['name'] = $row['name'];
+            	$_SESSION['id'] = $row['id'];
+            	header("Location: home.php");
+		        exit();
+            }else{
+				header("Location: index.php?error=Incorect User name or password");
+		        exit();
+			}
+		}else{
+			header("Location: index.php?error=Incorect User name or password");
+	        exit();
+		}
+	}
+	
+}else{
+	header("Location: index.php");
+	exit();
+}
