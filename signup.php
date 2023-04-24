@@ -3,10 +3,16 @@
 
 <head>
     <title>SIGN UP</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
+<nav>
+    <ul>
+       <li><h1>Movies <span>World</span></h1></li>
+       <li><a href="all.php" class="H">Home page</a></li>
+    </ul>
+</nav>
     <form action="signup-check.php" method="post">
         <h2>SIGN UP</h2>
         <?php if (isset($_GET['error'])) { ?>
@@ -39,7 +45,7 @@
         <input type="password" name="re_password" placeholder="Re_Password"><br>
 
         <button type="submit">Sign Up</button>
-        <a href="index.php" class="ca">Already have an account?</a>
+        <a href="index.php" class="reg">Already have an account?</a>
     </form>
 </body>
 
