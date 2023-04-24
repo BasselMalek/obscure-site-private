@@ -2,14 +2,14 @@ CREATE DATABASE movieworld;
 USE movieworld;
 
 CREATE TABLE movies (
-    m_id  varchar(12) NOT NULL,
-   m_title varchar(45) NOT NULL,
-   m_director varchar(45) NOT NULL,
-   m_actors varchar(255) NOT NULL,
-   m_release_year int(11) NOT NULL,
-   m_genere varchar(45) NOT NULL,
-   m_rating float,
-   m_coverimage varchar(12) NOT NULL
+    id  varchar(12) NOT NULL,
+    title varchar(45) NOT NULL,
+    director varchar(45) NOT NULL,
+    actors varchar(255) NOT NULL,
+    release_year int(11) NOT NULL,
+    genere varchar(45) NOT NULL,
+    rating float,
+    coverimage varchar(12) NOT NULL
 );
 
 CREATE TABLE series (
@@ -25,7 +25,7 @@ CREATE TABLE series (
 
 
 
-INSERT INTO movies (m_id,m_title, m_director,m_actors, m_release_year,m_genere, m_rating,m_coverimage) VALUES
+INSERT INTO movies (id,title, director,actors, release_year,genere, rating,coverimage) VALUES
     ('MoDT001','The Shawshank Redemption', 'Frank Darabont','Morgan Freeman',1994,'Drama', 9.3,'mov1.jpg'),
     ('MoDT002','The Godfather', 'Francis Ford Coppola','Al Pacino', 1972,'Drama', 9.2,'mov2.jpg'),
     ('MoDT003','The Dark Knight', 'Christopher Nolan','Christian Bale', 2008,'Action', 9.0,'mov3.jpg'),
