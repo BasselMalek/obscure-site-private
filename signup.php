@@ -13,6 +13,9 @@
        <li><a href="all.php" class="H">Home page</a></li>
     </ul>
 </nav>
+<div class="background"></div>
+        <div class="formflex">
+            <div class="formwrap">
     <form action="signup-check.php" method="post">
         <h2>SIGN UP</h2>
         <?php if (isset($_GET['error'])) { ?>
@@ -47,6 +50,7 @@
         <button type="submit">Sign Up</button>
         <a href="index.php" class="reg">Already have an account?</a>
     </form>
+            </div></div>
 </body>
 
 </html>
