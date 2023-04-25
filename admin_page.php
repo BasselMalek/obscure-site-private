@@ -32,90 +32,31 @@
         </ul>
     </nav>
     <?php
-    include("admindbman.php");
+    include("tb_gen_ret.php");
+    $hostName = "localhost";
+    $userName = "root";
+    $password = "testforit223";
+    $databaseName = "movieworld";
+    $db = retrieveDB($hostName, $userName, $password, $databaseName);
+    $mcolumns = retrieveColumnsFromTable($db, "movies");
+    $mdata = rertieveTableContent($db, "movies", $mcolumns);
+    $scolumns = retrieveColumnsFromTable($db, "series");
+    $sdata = rertieveTableContent($db, "series", $scolumns);
     ?>
-    <?php
-    if (is_array($fetchData)) {
-        $sn = 1;
-        foreach ($fetchData as $data)
-            ;
-    }
-    ?>
+
     <div class="main-container">
         <div class="control-pane">
-            <table class="wd-Table">
-                <thead>
-                    Foo
-                </thead>
-                <tbody>
-                    <td>
-                        <?php echo $data["actors"] ?>
-                    </td>
-                </tbody>
+            <table class="wd-table">
+                <?php
+                displayTableData($mdata, $mcolumns);
+                ?>
             </table>
         </div>
         <div class="control-pane">
-            <table class="wd-Table">
-                <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jane</td>
-                        <td>Doe</td>
-                        <td>sample@example.org</td>
-                        <td><a href="#">View</a> - <a href="#">Edit</a> - <a href="#">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>Jane</td>
-                        <td>Doe</td>
-                        <td>sample@example.org</td>
-                        <td><a href="#">View</a> - <a href="#">Edit</a> - <a href="#">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>Jane</td>
-                        <td>Doe</td>
-                        <td>sample@example.org</td>
-                        <td><a href="#">View</a> - <a href="#">Edit</a> - <a href="#">Delete</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="control-pane">
-            <table class="wd-Table">
-                <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Jane</td>
-                        <td>Doe</td>
-                        <td>sample@example.org</td>
-                        <td><a href="#">View</a> - <a href="#">Edit</a> - <a href="#">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>Jane</td>
-                        <td>Doe</td>
-                        <td>sample@example.org</td>
-                        <td><a href="#">View</a> - <a href="#">Edit</a> - <a href="#">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>Jane</td>
-                        <td>Doe</td>
-                        <td>sample@example.org</td>
-                        <td><a href="#">View</a> - <a href="#">Edit</a> - <a href="#">Delete</a></td>
-                    </tr>
-                </tbody>
+            <table class="wd-table">
+                <?php
+                displayTableData($sdata, $scolumns);
+                ?>
             </table>
         </div>
     </div>

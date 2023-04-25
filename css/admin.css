@@ -56,7 +56,8 @@ button-solid:focus {
 
 .main-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: nowrap;
   gap: 10px;
   height: 800px;
   border-radius: 10px;
@@ -65,10 +66,43 @@ button-solid:focus {
   background-color: white;
 }
 
+.sep {
+  height: 500px;
+}
+
 .control-pane {
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
-  background-color: aqua;
+  background-color: rgba(2, 2, 15, 0.527);
+}
+
+table.wd-table {
+  border: 2px solid #ffffff;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.wd-table td,
+table.wd-table th {
+  border: 1px solid #ffffff;
+  padding: 3px 4px;
+}
+table.wd-table tbody td {
+  font-size: 13px;
+}
+table.wd-table thead {
+  background: #ffffff;
+  border-bottom: 4px solid #333333;
+}
+table.wd-table thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  border-left: 2px solid #333333;
+}
+table.wd-table thead th:first-child {
+  border-left: none;
 }
