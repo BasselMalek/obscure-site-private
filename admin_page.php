@@ -32,7 +32,7 @@
         </ul>
     </nav>
     <?php
-    include("tb_gen_ret.php");
+    include("adminfuncs.php");
     $hostName = "localhost";
     $userName = "root";
     $password = "testforit223";
