@@ -11,55 +11,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Document</title>
+    <title>Movies</title>
 </head>
 
 <body>
-    <div class="backimage">
-        <div class="wrapper">
-            <div class="expanded-nav-wrapper">
-                <nav class="expanded-nav">
-                    <ul>
-                        <li><h1 class="title">Movies <span>World</span></h1></li>
-                        <li><a href="index.php" >All</a></li>
-                        <li><a href="movies.php" class ="clicked">Movies</a></li>
-                        <li><a href="tvshows.php">TV shows</a></li>
-                        <li><a href="feedback.php">feedback</a></li>
-                        <li>
-                            <form action="search.php">
-                                <button  class="button-solid">
-                                    <span class="material-symbols-outlined" style="color:white;">
-                                       search
-                                       <a href="search.php"></a>
-                                    </span>
-                               </button>
-                            </form>
-                        </li>
-                        <li> <form action="user_page.php">
-                           <button class="button-solid"><i class="material-icons">account_circle</i></button>
-                           </form>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-       
-        <div class="intro-section">
-            <div class="intro-text-wrapper">
-                <h2 class="intro-heading">Movies Gallery</h2>
-                <h4 class="intro-text">Movies move us like nothing else can,<br> whether they’re scary, funny, dramatic,
-                    romantic
-                    or anywhere in-between. <br>So many titles, so much to experience.<br> Explore our vast movie library full
-                    of
-                    trailers and IMDb ratings.</h4>
-            </div>
-        </div>
-    </div></div>
-    <div class="grid-container">
+    <?php
+    include("navbar.php");
+    $hostName = "localhost";
+    $userName = "root";
+    $password = "testforit223";
+    $databaseName = "movieworld";
+    $db = retrieveDB($hostName, $userName, $password, $databaseName);
+    generateNav("images/movies.jpg", "Movies Gallery", "Movies move us like nothing else can,
+    whether they’re scary, funny, dramatic, romantic or anywhere in-between.
+    So many titles, so much to experience.
+    Explore our vast movie library full of trailers and IMDb ratings.")
+        ?>
+    <!-- <div class="grid-container">
         <div class="row">
             <div class="col">
-                <img src="images\placeholder.jpg" alt="Poster 1">
+                <?php generatePic($db, "movies", "MVDT001"); ?>
             </div>
             <div class="col">
                 <img src="images\placeholder.jpg" alt="Poster 2">
@@ -108,7 +82,8 @@
                 <img src="images\placeholder.jpg" alt="Poster 15">
             </div>
         </div>
-    </div>
+    </div> -->
+    <?php generateLibrary($db, "movies") ?>
 </body>
 
 </html>

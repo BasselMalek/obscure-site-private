@@ -1,20 +1,25 @@
 .grid-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .row {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
+  max-width: fit-content;
   margin-bottom: 10px;
+  flex-wrap: wrap;
+  justify-items: start;
 }
 
 .col {
-  margin: 0 10px;
+  margin: 10px 19px;
+  flex: 0 1 265px;
+  filter: drop-shadow(1px 1px 5px rgba(255, 0, 250, 0.3));
 }
 .grid-container img {
   height: 400px;
+  width: 265px;
 }
 
 * {
@@ -23,110 +28,4 @@
 body {
   background-color: #111111;
   margin: 0%;
-}
-
-nav {
-  background-color: rgba(2, 2, 15, 0.3);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.expanded-nav-icons {
-  display: flex;
-  gap: 15px;
-}
-
-.intro-section .intro-text-wrapper {
-  color: #ffffff;
-  padding-left: 25px;
-}
-.intro-section .intro-text-wrapper h1 {
-  margin-left: -5px;
-  font-weight: bolder;
-  font-size: 64px;
-}
-
-.intro-section .intro-text-wrapper p {
-  max-width: 440px;
-}
-
-.intro-section {
-  display: flex;
-  align-items: center;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-bottom: 20px;
-}
-
-.wrapper {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/images/tv.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.backimage {
-  background-image: url("../images/moviesback.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.intro-text-wrapper {
-  color: white;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-body {
-  background-color: rgba(0, 0, 0, 0.89);
-  height: 100%;
-  width: 100%;
-  margin: 0%;
-  font-family: Arial, sans-serif;
-}
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px 30px;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: right;
-}
-.title {
-  padding-right: 300px;
-  color: white;
-}
-nav ul li a:hover {
-  color: rgb(255, 0, 200);
-}
-span {
-  color: rgb(255, 0, 200);
-}
-nav {
-  background-color: rgba(2, 2, 15, 0.413);
-  padding: 0%;
-  display: flex;
-}
-.clicked {
-  color: rgb(255, 0, 200);
-}
-.button-solid {
-  border: none;
-  background-color: transparent;
-  font-size: 27px;
-  color: white;
-}
-button-solid:focus {
-  border: none;
-  outline: none;
 }
