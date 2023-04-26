@@ -24,10 +24,10 @@
             <nav class="expanded-nav">
                 <ul>
                     <li><h1 class="title">Movies <span>World</span></h1></li>
-                    <li><a href="index.html" class ="clicked">All</a></li>
-                    <li><a href="movies.html">Movies</a></li>
-                    <li><a href="tvshows.html">TV shows</a></li>
-                    <li><a href="feedback.html">feedback</a></li>
+                    <li><a href="main_page.php" class ="clicked">All</a></li>
+                    <li><a href="movies.php">Movies</a></li>
+                    <li><a href="tvshows.php">TV shows</a></li>
+                    <li><a href="feedback.php">feedback</a></li>
                     <li>
                         <form action="search.html">
                             <button  class="button-solid">
