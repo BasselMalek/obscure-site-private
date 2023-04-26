@@ -5,53 +5,11 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background-color: rgba(0, 0, 0, 0.89);
+  background-color: #111111;
   height: 100%;
   width: 100%;
   margin: 0%;
   font-family: Arial, sans-serif;
-}
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px 30px;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: right;
-}
-.title {
-  padding-right: 300px;
-  color: white;
-}
-nav ul li a:hover {
-  color: rgb(255, 0, 200);
-}
-span {
-  color: rgb(255, 0, 200);
-}
-nav {
-  background-color: rgba(2, 2, 15, 0.527);
-  padding: 0%;
-  display: flex;
-}
-.clicked {
-  color: rgb(255, 0, 200);
-}
-body {
-  background-color: rgba(0, 0, 0, 0.89);
-}
-.button-solid {
-  border: none;
-  background-color: rgba(2, 2, 15, 0.527);
-  font-size: 27px;
-  color: rgb(255, 0, 200);
-}
-button-solid:focus {
-  border: none;
-  outline: none;
 }
 
 .main-container {
@@ -59,50 +17,43 @@ button-solid:focus {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 10px;
-  height: 800px;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
-  background-color: white;
-}
-
-.sep {
-  height: 500px;
+  background-color: #111111;
 }
 
 .control-pane {
   border-radius: 10px;
   margin: 10px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
-  background-color: rgba(2, 2, 15, 0.527);
+  background-color: #333333;
 }
 
 table.wd-table {
-  border: 2px solid #ffffff;
   width: 100%;
-  text-align: center;
+  background-color: #333333;
   border-collapse: collapse;
+  border-width: 2px;
+  border-color: #f859e3;
+  border-style: solid;
+  color: #ffffff;
 }
+
 table.wd-table td,
 table.wd-table th {
-  border: 1px solid #ffffff;
-  padding: 3px 4px;
+  border-width: 2px;
+  border-color: #f859e3;
+  border-style: solid;
+  padding: 5px;
 }
-table.wd-table tbody td {
-  font-size: 13px;
-}
+
 table.wd-table thead {
-  background: #ffffff;
-  border-bottom: 4px solid #333333;
+  background-color: #bd10c9;
 }
-table.wd-table thead th {
-  font-size: 15px;
-  font-weight: bold;
-  color: #333333;
-  text-align: center;
-  border-left: 2px solid #333333;
-}
-table.wd-table thead th:first-child {
-  border-left: none;
+
+.table-header {
+  padding-bottom: 5px;
+  color: #ffffff;
 }

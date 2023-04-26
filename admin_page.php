@@ -10,28 +10,10 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>
-                <h1>Movies <span>World</span></h1>
-            </li>
-            <li><a href="index.php">All</a></li>
-            <li><a href="movies.php">Movies</a></li>
-            <li><a href="tvshows.php">TV shows</a></li>
-            <li><a href="feedback.php" class="clicked">feedback</a></li>
-            <li>
-                <form action="search.php">
-                    <button class="button-solid">
-                        <span class="material-symbols-outlined" style="color:white;">
-                            search
-                            <a href="search.php"></a>
-                        </span>
-                    </button>
-                </form>
-            </li>
-        </ul>
-    </nav>
+
     <?php
+    include("navbar.php");
+    generateNav("images/placeholder.jpg", "Huh", "flavor");
     include("adminfuncs.php");
     $hostName = "localhost";
     $userName = "root";
@@ -46,6 +28,7 @@
 
     <div class="main-container">
         <div class="control-pane">
+            <h1 class="table-header">Movies</h1>
             <table class="wd-table">
                 <?php
                 displayTableData($mdata, $mcolumns);
@@ -54,6 +37,7 @@
         </div>
         <div class="control-pane">
             <table class="wd-table">
+                <h1 class="table-header">TV Shows</h1>
                 <?php
                 displayTableData($sdata, $scolumns);
                 ?>

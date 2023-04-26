@@ -1,11 +1,5 @@
 <?php
 
-function retrieveDB($hostName, $userName, $password, $databaseName)
-{
-    $db = new mysqli($hostName, $userName, $password, $databaseName);
-    return $db;
-
-}
 
 function retrieveColumnsFromTable($db, $table_name)
 {
