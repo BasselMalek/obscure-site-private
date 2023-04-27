@@ -6,45 +6,17 @@
 }
 
 * {
-  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.89);
+  height: 100%;
+  width: 100%;
   margin: 0%;
-}
-
-nav {
-  background-color: rgba(2, 2, 15, 0.3);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-/*.expanded-nav a {
-  font-weight: bold;
-  font-size: 32px;
-  text-decoration: none;
-  color: #d1ccdcff;
-}
-.expanded-nav span {
-  color: #cc00a0ff;
-}
-
-.expanded-nav .fa-solid,
-.fa-regular {
-  color: #cc00a0ff;
-}
-.expanded-nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-}*/
-
-.expanded-nav-icons {
-  display: flex;
-  gap: 15px;
+  font-family: Arial, sans-serif;
 }
 
 .carousel {
@@ -52,10 +24,12 @@ nav {
 }
 
 .slider {
-  margin: 0;
-  padding: 0 4%;
+  margin: 20px;
+  padding: 10px;
   -ms-touch-action: pan-y;
   touch-action: pan-y;
+  border: 3px solid rgba(255, 0, 250, 0.3);
+  border-radius: 15px;
 }
 
 .slider .handle.handlePrev {
@@ -212,95 +186,8 @@ nav {
   transform: translate3d(125px, 0, 0);
 }
 
-.intro-section p,
-h1 {
-  text-align: center;
-}
-
-.intro-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px;
-}
-.backimage {
-  background-image: url("../images/spiderman.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .carousel-section h3 {
   font-weight: bold;
   font-size: 24px;
   color: white;
-}
-.carousel-section {
-  background-color: rgba(0, 0, 0, 0.89);
-}
-
-.wrapper {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/images/tv.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-body {
-  background-color: rgba(0, 0, 0, 0.89);
-}
-.intro-text-wrapper {
-  color: white;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-body {
-  background-color: rgba(0, 0, 0, 0.89);
-  height: 100%;
-  width: 100%;
-  margin: 0%;
-  font-family: Arial, sans-serif;
-}
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px 30px;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: right;
-}
-.title {
-  padding-right: 300px;
-  color: white;
-}
-nav ul li a:hover {
-  color: rgb(255, 0, 200);
-}
-span {
-  color: rgb(255, 0, 200);
-}
-nav {
-  background-color: rgba(2, 2, 15, 0.527);
-  padding: 0%;
-  display: flex;
-}
-.clicked {
-  color: rgb(255, 0, 200);
-}
-.button-solid {
-  border: none;
-  background-color: transparent;
-  font-size: 27px;
-  color: white;
-}
-button-solid:focus {
-  border: none;
-  outline: none;
 }

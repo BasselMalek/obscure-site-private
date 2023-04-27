@@ -18,7 +18,7 @@ body {
 .formwrap {
   flex: auto;
 }
-form {
+.login-form {
   width: 300px;
   margin: auto;
   background-color: white;
@@ -27,7 +27,7 @@ form {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-input[type="text"],
+.login-form input[type="text"],
 input[type="password"],
 input[type="email"] {
   width: 100%;
@@ -54,69 +54,23 @@ button:hover {
   opacity: 0.8;
 }
 
-.header {
-  display: flex;
-  background-color: rgba(80, 80, 80, 0.3);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.header-logo {
-  flex: auto;
-}
-
-.header-logo-img {
-  width: 75px;
-  margin-left: 15px;
-}
-
-.header-link {
-  flex: auto;
-  padding: 0%;
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  margin-right: 15px;
-  gap: 5px;
-}
-
-nav ul li{
-  list-style-type: none;
-  display:inline-block;
-  padding:10px 30px;
-}
-nav ul li a{
-  color:white;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: right;
-}
-h1{padding-right: 20px;
-color: white;}
-nav ul li a:hover{
-  color:rgb(255, 0, 200);
-}
-span{
-  color:rgb(255, 0, 200);
-}
-nav
-{ background-color: rgba(2, 2, 15, 0.527);  }
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .reg {
-  text-decoration: none ;
-  color:rgb(255, 0, 200);
+  text-decoration: none;
+  color: rgb(255, 0, 200);
   justify-content: center;
-  display:flex;
+  display: flex;
 }
-.H{
+.H {
   position: fixed;
   right: 20px;
   top: 12px;
 }
-input[type="radio"]{
+input[type="radio"] {
   accent-color: rgb(255, 0, 200);
 }

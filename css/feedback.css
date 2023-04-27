@@ -18,7 +18,7 @@ body {
 .formwrap {
   flex: auto;
 }
-form {
+.feedback-form {
   width: 300px;
   margin: auto;
   margin-top: 80px;
@@ -28,7 +28,7 @@ form {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-input[type="text"] {
+.feedback-form input[type="text"] {
   width: 100%;
   height: 300px;
   padding: 12px 20px;
@@ -52,32 +52,3 @@ button {
 button:hover {
   opacity: 0.8;
 }
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 10px 30px;
-}
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: right;
-}
-.title {
-  padding-right: 400px;
-  color: white;
-}
-nav ul li a:hover {
-  color: rgb(255, 0, 200);
-}
-span {
-  color: rgb(255, 0, 200);
-}
-nav {
-  background-color: rgba(2, 2, 15, 0.527);
-}
-.clicked {
-  color: rgb(255, 0, 200);
-}
-
-

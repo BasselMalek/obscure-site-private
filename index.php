@@ -10,31 +10,30 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><h1>Movies <span>World</span></h1></li>
-            <li><a href="main_page.php" class ="H">Home page</a></li>
-         </ul>
-    </nav>
+    <?php include("funcs/navbar.php");
+    generateNav(); ?>
     <div class="background"></div>
-        <div class="formflex">
-            <div class="formwrap">
-    <form action="login.php" method="post">
-        <h2>LOGIN</h2>
-        <?php if (isset($_GET['error'])) { ?>
-        <p class="error"><?php echo $_GET['error']; ?></p>
-        <?php } ?>
-        <label>User Name</label>
-        <input type="text" name="uname" placeholder="User Name"><br>
+    <div class="formflex">
+        <div class="formwrap">
+            <form class="login-form" action="login.php" method="post">
+                <h2>LOGIN</h2>
+                <?php if (isset($_GET['error'])) { ?>
+                    <p class="error">
+                        <?php echo $_GET['error']; ?>
+                    </p>
+                <?php } ?>
+                <label>User Name</label>
+                <input type="text" name="uname" placeholder="User Name"><br>
 
-        <label>Password</label>
-        <input type="password" name="password" placeholder="Password"><br>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Password"><br>
 
-        <button type="submit">Login</button>
-        <a href="signup.php" class="reg"> Don't have acount ? register first !</a>
-        <a href ="main_page.php" class="reg"> continue as Guest</a>
-    </form>
-            </div></div>
+                <button type="submit">Login</button>
+                <a href="signup.php" class="reg"> Don't have acount ? register first !</a>
+                <a href="main_page.php" class="reg"> continue as Guest</a>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

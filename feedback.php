@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,23 +10,20 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><h1 class="title">Movies <span>World</span></h1></li>
-            <li><a href="main_page.php">All</a></li>
-            <li><a href="movies.php" >Movies</a></li>
-            <li><a href="tvshows.php">TV shows</a></li>
-            <li><a href="feedback.php" class ="clicked">feedback</a></li>
-        </ul>
-    </nav>
+    <?php
+    include("funcs/dbconnect.php");
+    include("funcs/navbar.php");
+    generateNav();
+    ?>
     <div class="formflex">
         <div class="formwrap">
-            <form action="process-login.php" method="POST" class="feedback">
+            <form class="feedback-form" action="process-login.php" method="POST" class="feedback">
                 <h3>feedback</h3>
                 <input type="text" name="feedback" required placeholder="Write a comment.....">
                 <br>
                 <button type="submit" class="submit">send feedback</button>
-         </div>
+        </div>
     </div>
 </body>
+
 </html>
