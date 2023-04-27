@@ -1,6 +1,6 @@
 <?php
 
-function generateNav($pic_url, $header, $flavor)
+function generateNav($mode = "raw", $pic_url = "", $header = "", $flavor = "")
 {
     echo '<style>
     nav {
@@ -9,6 +9,10 @@ function generateNav($pic_url, $header, $flavor)
         display: flex;
         justify-content: space-between;
         height: 50px;
+    }
+
+    .blur-div {
+        backdrop-filter: blur(10px);
     }
 
     .intro-section .intro-text-wrapper {
@@ -35,10 +39,14 @@ function generateNav($pic_url, $header, $flavor)
         margin-bottom: 20px;
     }
 
-    .wrapper {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url("' . $pic_url . '");
-        background-repeat: no-repeat;
+    .wrapper {';
+    if ($mode == "full") {
+        echo 'background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url("' . $pic_url . '");';
+    } else {
+        echo 'background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));';
+    }
+    echo 'background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
     }
@@ -153,60 +161,42 @@ function generateNav($pic_url, $header, $flavor)
 </style>
 <script src="https://kit.fontawesome.com/5658c860c9.js" crossorigin="anonymous"></script>
 <div class="wrapper">
-    <div class="expanded-nav-wrapper">
-        <nav class="expanded-nav">
-            <a class="title-hyp" href="index.php">
-                <h1 class="title">Movies <span>World</span></h1>
-            </a>
-            <div class="search-bar">
-                <form action="search.php" method="get"> <i class="fa-solid fa-magnifying-glass fa-xl"></i> <input
-                        type="text" name="search" class="search">
+    <div class="blur-div">
+        <div class="expanded-nav-wrapper">
+            <nav class="expanded-nav">
+                <a class="title-hyp" href="index.php">
+                    <h1 class="title">Movies <span>World</span></h1>
+                </a>';
+    if ($mode == "full") {
+        echo '<div class="search-bar">
+                    <form action="search.php" method="get"> <i class="fa-solid fa-magnifying-glass fa-xl"></i> <input
+                            type="text" name="search" class="search">
 
+                </div>';
+    }
+
+    echo '<ul>
+                    <li><a href="movies.php" class="clicked">Movies</a></li>
+                    <li><a href="tvshows.php">TV shows</a></li>
+                    <li><a href="feedback.php">Feedback</a></li>
+                    <li>
+                        <form action="user_page.php">
+                            <button class="button-solid"><i class="fa-solid fa-circle-user"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>';
+    if ($mode == "full") {
+        echo '<div class="intro-section">
+            <div class="intro-text-wrapper">
+                <h2 class="intro-heading">' . $header . '</h2>
+                <h4 class="intro-text"> ' . $flavor . '</h4>
             </div>
-            <ul>
-                <li><a href="movies.php" class="clicked">Movies</a></li>
-                <li><a href="tvshows.php">TV shows</a></li>
-                <li><a href="feedback.php">Feedback</a></li>
-                <li>
-                    <form action="user_page.php">
-                        <button class="button-solid"><i class="fa-solid fa-circle-user"></i></button>
-                    </form>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="intro-section">
-        <div class="intro-text-wrapper">
-            <h2 class="intro-heading">' . $header . '</h2>
-            <h4 class="intro-text"> ' . $flavor . '</h4>
-        </div>
-    </div>
+        </div>';
+    }
+    echo '</div>
 </div>';
 }
 
-function generatePic($db, $table_name, $ID)
-{
-    $query = "SELECT coverimage FROM " . $table_name . " WHERE ID = '" . $ID . "'";
-    $result = $db->query($query);
-    $result = array_column(array_values(mysqli_fetch_all($result, MYSQLI_ASSOC)), 'coverimage');
-    $path = ($table_name == "movies") ? "movcovr" : "sercovr";
-    $path = $path . "/" . $result[0];
-    echo '<img src=' . $path . ' alt=' . $ID . '>';
-}
-
-function generateLibrary($db, $table_name)
-{
-    $query = "SELECT ID FROM " . $table_name;
-    $result = $db->query($query);
-    $result = array_column(array_values(mysqli_fetch_all($result, MYSQLI_ASSOC)), 'ID');
-    echo '<div class="grid-container">
-    <div class="row">';
-    foreach ($result as $value) {
-        echo '<div class="col">';
-        generatePic($db, $table_name, $value);
-        echo '</div>';
-    }
-    echo '</div></div>';
-}
 ?>

@@ -16,6 +16,7 @@
     <?php
     include("funcs/dbconnect.php");
     include("funcs/navbar.php");
+    include("funcs/contentretrieval.php");
     generateNav("full", "images/movies.jpg", "Movies Gallery", "Movies move us like nothing else can,
     whether they’re scary, funny, dramatic, romantic or anywhere in-between.
     So many titles, so much to experience.
