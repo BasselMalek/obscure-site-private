@@ -1,6 +1,6 @@
 <?php
-include("adminfuncs.php");
-include("navbar.php");
+include("funcs/adminfuncs.php");
+include("funcs/navbar.php");
 $hostName = "localhost";
 $userName = "root";
 $password = "testforit223";

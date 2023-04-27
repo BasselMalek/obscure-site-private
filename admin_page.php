@@ -12,9 +12,9 @@
 <body>
 
     <?php
-    include("navbar.php");
-    generateNav("images/placeholder.jpg", "Huh", "flavor");
-    include("adminfuncs.php");
+    include("funcs/navbar.php");
+    generateNav("full", "images/placeholder.jpg", "Huh", "flavor");
+    include("funcs/adminfuncs.php");
     $hostName = "localhost";
     $userName = "root";
     $password = "testforit223";
