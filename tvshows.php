@@ -15,6 +15,7 @@
 <body>
     <?php
     include("funcs/dbconnect.php");
+    include("funcs/contentretrieval.php");
     include("funcs/navbar.php");
     generateNav("full", "images/tv.jpg", "TV Gallery", "These days, the small screen has some very big things to offer.
     From sitcoms to dramas to travel and talk shows, these are all the best programs on TV.
