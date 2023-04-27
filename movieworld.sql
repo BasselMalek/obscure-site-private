@@ -25,7 +25,7 @@ CREATE TABLE series (
 
 
 
-INSERT INTO movies (id,title, director,actors, release_year,genere, rating,coverimage) VALUES
+INSERT INTO movies (ID,title, director,actors, release_year,genere, rating,coverimage) VALUES
     ('MVDT001','The Shawshank Redemption', 'Frank Darabont','Morgan Freeman',1994,'Drama', 9.3,'mov1.jpg'),
     ('MVDT002','The Godfather', 'Francis Ford Coppola','Al Pacino', 1972,'Drama', 9.2,'mov2.jpg'),
     ('MVDT003','The Dark Knight', 'Christopher Nolan','Christian Bale', 2008,'Action', 9.0,'mov3.jpg'),
@@ -41,7 +41,7 @@ INSERT INTO movies (id,title, director,actors, release_year,genere, rating,cover
 
 
 
-INSERT INTO series (id,title,creator,actors, release_year,genere, rating,coverimage) VALUES
+INSERT INTO series (ID,title,creator,actors, release_year,genere, rating,coverimage) VALUES
     ('TVDT001','Breaking Bad', 'Vince Gilligan','Al Pacino',2008,'Drama',  9.5,'ser1.jpg'),
     ('TVDT002','Game of Thrones', 'David Benioff, D.B. Weiss','Leonardo DiCaprio', 2011,'Drama', 9.3,'ser2.jpg'),
     ('TVDT003','Stranger Things', 'The Duffer Brothers','Millie Bobby Brown', 2016,'Science Fiction', 8.8,'ser3.jpg'),
