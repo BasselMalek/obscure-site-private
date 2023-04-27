@@ -1,10 +1,4 @@
 <?php
-function retrieveDB($hostName, $userName, $password, $databaseName)
-{
-    $db = new mysqli($hostName, $userName, $password, $databaseName);
-    return $db;
-
-}
 
 function generateNav($pic_url, $header, $flavor)
 {
