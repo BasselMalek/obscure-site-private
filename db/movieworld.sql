@@ -2,30 +2,30 @@ CREATE DATABASE movieworld;
 USE movieworld;
 
 CREATE TABLE movies (
-    m_id  varchar(12) NOT NULL,
-   m_title varchar(45) NOT NULL,
-   m_director varchar(45) NOT NULL,
-   m_actors varchar(255) NOT NULL,
-   m_release_year int(11) NOT NULL,
-   m_genere varchar(45) NOT NULL,
-   m_rating float,
-   m_coverimage varchar(12) NOT NULL
+   id  varchar(12) NOT NULL,
+   title varchar(45) NOT NULL,
+   director varchar(45) NOT NULL,
+   actors varchar(255) NOT NULL,
+   release_year int(11) NOT NULL,
+   genere varchar(45) NOT NULL,
+   rating float,
+   coverimage varchar(12) NOT NULL
 );
 
 CREATE TABLE series (
-    s_id  varchar(12) NOT NULL,
-   s_title varchar(45) NOT NULL,
-   s_creator varchar(45) NOT NULL,
-   s_actors varchar(255) NOT NULL,
-   s_release_year int(11) NOT NULL,
-   s_genere varchar(45) NOT NULL,
-   s_rating float,
-   s_coverimage varchar(12) NOT NULL
+   id  varchar(12) NOT NULL,
+   title varchar(45) NOT NULL,
+   creator varchar(45) NOT NULL,
+   actors varchar(255) NOT NULL,
+   release_year int(11) NOT NULL,
+   genere varchar(45) NOT NULL,
+   rating float,
+   coverimage varchar(12) NOT NULL
 );
 
 
 
-INSERT INTO movies (m_id,m_title, m_director,m_actors, m_release_year,m_genere, m_rating,m_coverimage) VALUES
+INSERT INTO movies (id,title,director,actors,release_year,genere,rating,coverimage) VALUES
     ('MoDT001','The Shawshank Redemption', 'Frank Darabont','Morgan Freeman',1994,'Drama', 9.3,'mov1.jpg'),
     ('MoDT002','The Godfather', 'Francis Ford Coppola','Al Pacino', 1972,'Drama', 9.2,'mov2.jpg'),
     ('MoDT003','The Dark Knight', 'Christopher Nolan','Christian Bale', 2008,'Action', 9.0,'mov3.jpg'),
@@ -41,7 +41,7 @@ INSERT INTO movies (m_id,m_title, m_director,m_actors, m_release_year,m_genere, 
 
 
 
-INSERT INTO series (s_id,s_title,s_creator,s_actors, s_release_year,s_genere, s_rating,s_coverimage) VALUES
+INSERT INTO series (id,title,creator,actors,release_year,genere,rating,coverimage) VALUES
     ('MoDT013','Breaking Bad', 'Vince Gilligan','Al Pacino',2008,'Drama',  9.5,'ser1.jpg'),
     ('MoDT014','Game of Thrones', 'David Benioff, D.B. Weiss','Leonardo DiCaprio', 2011,'Drama', 9.3,'ser2.jpg'),
     ('MoDT015','Stranger Things', 'The Duffer Brothers','Millie Bobby Brown', 2016,'Science Fiction', 8.8,'ser3.jpg'),

@@ -15,15 +15,56 @@
     include("funcs/navbar.php");
     generateNav();
     ?>
-    <div class="formflex">
+     <?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "feedback_db";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Get form data
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $message = $_POST["message"];
+
+  $sql = "INSERT INTO feedback (name, email, message) VALUES ('$name', '$email', '$message')";
+
+  if ($conn->query($sql) === TRUE) {
+    echo "Feedback submitted successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+  }
+}
+
+?>
+ <div class="formflex">
         <div class="formwrap">
-            <form class="feedback-form" action="process-login.php" method="POST" class="feedback">
-                <h3>feedback</h3>
-                <input type="text" name="feedback" required placeholder="Write a comment.....">
-                <br>
-                <button type="submit" class="submit">send feedback</button>
-        </div>
+           <form method="post" class="feedback-form" class="feedback" >
+               <label for="name">Name:</label>
+               <br>
+                 <input type="text" name="name" required>
+                    <br>
+               <label for="email">Email:</label>
+               <br>
+                 <input type="email" name="email" required><br>
+
+               <label for="message">Message:</label><br>
+                 <textarea name="message" required ></textarea>
+
+              <button type="submit">Submit</button>
+           </form>
+           </div>
     </div>
 </body>
-
 </html>
+<?php
+$conn->close();
+?>
+  

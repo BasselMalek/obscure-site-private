@@ -109,10 +109,6 @@ function generateNav($mode = "raw", $pic_url = "", $header = "", $flavor = "")
         display: flex;
     }
 
-    .clicked {
-        color: rgb(255, 0, 200);
-    }
-
     .button-solid {
         border: none;
         background-color: transparent;
