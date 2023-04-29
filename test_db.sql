@@ -12,7 +12,7 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+  
 
 
 INSERT INTO `users` (`id`, `user_name`, `password`, `name`) VALUES

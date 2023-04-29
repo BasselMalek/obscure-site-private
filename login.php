@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "funcs/dbconnect.php";
+include "db_conn.php";
 
 if (isset($_POST['uname']) && isset($_POST['password'])) {
 
@@ -28,7 +28,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
 		$sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
 
-		$result = mysqli_query($db, $sql);
+		$result = mysqli_query($conn, $sql);
 
 		if (mysqli_num_rows($result) === 1) {
 			$row = mysqli_fetch_assoc($result);

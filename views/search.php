@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".css/movies.css">
+    <title>Movies world feedback </title>
+</head>
+
+
+<body>
 <?php
 session_start();
 include 'header.php';
@@ -17,12 +30,13 @@ include 'header.php';
          OR release_year LIKE '%$search%' ";
             $result = mysqli_query($db, $sql);
             $queryresult = mysqli_num_rows($result);
-
+    
             if ($queryresult > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<td><a href='displ.php?moviedid=" . $row['ID'] . " '>
+                    echo "<td> <a href='displ.php?moviedid=" . $row['id'] . " '>
                     <img src='../images/movcovr/" . $row['coverimage'] . "'></a><br>
-                    <h3> " . $row['title'] . "</h3><td>";
+                    <h3> " . $row['title'] . "</h3><td> "; 
+                  
                 }
 
                 $sqll = "SELECT * FROM series WHERE   title LIKE '%$search%' 
@@ -34,7 +48,7 @@ include 'header.php';
 
                 if ($queryresultt > 0) {
                     while ($roww = mysqli_fetch_assoc($resultt)) {
-                        echo "<td><a href='displ.php?seriesid=" . $roww['ID'] . " '>
+                        echo "<td><a href='displ.php?seriesid=" . $roww['id'] . " '>
                             <img src='../images/sercovr/" . $roww['coverimage'] . "'></a><br>
                             <h3> " . $roww['title'] . "</h3><td>";
                     }
@@ -49,3 +63,5 @@ include 'header.php';
     }
     ?>
 </div>
+</body>
+</html>
