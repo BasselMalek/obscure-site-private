@@ -51,7 +51,7 @@ function generateNav($mode = "raw", $pic_url = "", $header = "", $flavor = "")
     }
     echo 'background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position: top;
     }
 
     .intro-text-wrapper {
@@ -203,3 +203,4 @@ function generateNav($mode = "raw", $pic_url = "", $header = "", $flavor = "")
 }
 
 ?>
+
