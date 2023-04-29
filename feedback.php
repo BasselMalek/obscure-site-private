@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
  <div class="formflex">
         <div class="formwrap">
-           <form method="post" class="feedback-form" class="feedback" >
+           <form method="post" class="feedback-form" class="feedback" autocomplete="off" >
                <label for="name">Name:</label>
                <br>
                  <input type="text" name="name" required>
