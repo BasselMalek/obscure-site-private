@@ -109,10 +109,6 @@ function generateNav($mode = "raw", $pic_url = "", $header = "", $flavor = "")
         display: flex;
     }
 
-    .clicked {
-        color: rgb(255, 0, 200);
-    }
-
     .button-solid {
         border: none;
         background-color: transparent;
@@ -161,6 +157,11 @@ function generateNav($mode = "raw", $pic_url = "", $header = "", $flavor = "")
     .fa-circle-user:hover {
         color: rgb(255, 0, 200);
     }
+    .submitse
+    {
+        border: none;
+        background-color: transparent;
+    }
 </style>
 <script src="https://kit.fontawesome.com/5658c860c9.js" crossorigin="anonymous"></script>
 <div class="wrapper">
@@ -172,9 +173,11 @@ function generateNav($mode = "raw", $pic_url = "", $header = "", $flavor = "")
                 </a>';
     if ($mode == "full") {
         echo '<div class="search-bar">
-                    <form action="search.php" method="POST"> <i class="fa-solid fa-magnifying-glass fa-xl"></i> <input
-                            type="text" name="search" class="search">
-
+                    <form action="views/search.php" method="POST"> 
+                         <i class="fa-solid fa-magnifying-glass fa-xl"></i> 
+                         <input type="text" name="search" class="search" >
+                         <button type="submit"  name="submit-search" class="submitse"> </button>
+                     </form>
                 </div>';
     }
 

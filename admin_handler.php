@@ -3,7 +3,7 @@ include("funcs/adminfuncs.php");
 include("funcs/navbar.php");
 $hostName = "localhost";
 $userName = "root";
-$password = "testforit223";
+$password = "";
 $databaseName = "movieworld";
 $db = retrieveDB($hostName, $userName, $password, $databaseName);
 end($_POST);

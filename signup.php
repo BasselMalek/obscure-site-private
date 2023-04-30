@@ -9,7 +9,11 @@
 <body>
     <?php include("funcs/navbar.php");
     generateNav(); ?>
-    <div class="background"></div>
+    <div class="video">
+    <video autoplay muted loop plays-inline>
+        <source src="./video/cinema.mp4" type="video/mp4">
+    </video>
+        <div class="content">
     <div class="formflex">
         <div class="formwrap">
             <form class="login-form" action="signup-check.php" method="post">
@@ -51,7 +55,7 @@
                 <a href="index.php" class="reg">Already have an account?</a>
             </form>
         </div>
-    </div>
+    </div></div>
 </body>
 
 </html>

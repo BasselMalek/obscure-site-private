@@ -49,7 +49,7 @@ function displayTableData($table_data, $columns)
             echo '<td>' . $value . '</td>';
         }
         echo '<td><form action="/admin_handler.php" method="post">
-        <button type="submit" class="button" name="delete" value=' . $element['ID'] . '>Delete</button></td></form>';
+        <button type="submit" class="button" name="delete" value=' . $element['id'] . '>Delete</button></td></form>';
         echo '</tr>';
     }
     echo '<tr><form action="/admin_handler.php" method="post">';
@@ -57,7 +57,7 @@ function displayTableData($table_data, $columns)
         echo '<td> <input type="text" name="add' . $columns[$i] . '"
         class="text" /></td>';
     }
-    echo '<td><button type="submit" class="button" name="add" value=' . $element['ID'] . '>Add</button></td></form></tr>';
+    echo '<td><button type="submit" class="button" name="add" value=' . $element['id'] . '>Add</button></td></form></tr>';
     echo '</tbody>';
 }
 

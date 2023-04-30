@@ -12,11 +12,15 @@
 <body>
     <?php include("funcs/navbar.php");
     generateNav(); ?>
-    <div class="background"></div>
-    <div class="formflex">
-        <div class="formwrap">
-            <form class="login-form" action="login.php" method="post">
-                <h2>LOGIN</h2>
+    <div class="video">
+    <video autoplay muted loop plays-inline>
+        <source src="./video/cinema.mp4" type="video/mp4">
+    </video>
+        <div class="content">
+           <div class="formflex">
+              <div class="formwrap">
+                 <form class="login-form" action="login.php" method="post">
+                    <h2>LOGIN</h2>
                 <?php if (isset($_GET['error'])) { ?>
                     <p class="error">
                         <?php echo $_GET['error']; ?>
@@ -34,6 +38,7 @@
             </form>
         </div>
     </div>
+</div>
 </body>
 
 </html>

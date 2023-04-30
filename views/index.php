@@ -9,7 +9,7 @@ include 'header.php';
     <button type="submit" name="submit-search">Search</button>
 </form>
 
-<h2>Popular Movies</h2>
+<h2>Popular Movies</h2> 
 
 <div class="mov">
     <?php
@@ -19,7 +19,7 @@ include 'header.php';
 
     if ($queryresult > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            echo "<td> <a href='displ.php?movieid=" . $row['ID'] . " '>
+            echo "<td> <a href='displ.php?movieid=" . $row['id'] . " '>
                     <img src='../images/movcovr/" . $row['coverimage'] . "'></a><br>
                     <h3> " . $row['title'] . "</h3> <td>";
         }
