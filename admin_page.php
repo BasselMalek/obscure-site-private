@@ -15,10 +15,9 @@
     include("funcs/navbar.php");
     generateNav("full", "images/placeholder.jpg", "Huh", "flavor");
     include("funcs/adminfuncs.php");
-    include("funcs/dbconnect.php");
     $hostName = "localhost";
     $userName = "root";
-    $password = "";
+    $password = "testforit223";
     $databaseName = "movieworld";
     $db = retrieveDB($hostName, $userName, $password, $databaseName);
     $mcolumns = retrieveColumnsFromTable($db, "movies");
