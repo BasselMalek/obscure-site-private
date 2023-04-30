@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/admin.css">
-    <title>Admin Pane</title>
+    <title>Admin Page</title>
 </head>
 
 <body>
@@ -15,9 +15,10 @@
     include("funcs/navbar.php");
     generateNav("full", "images/placeholder.jpg", "Huh", "flavor");
     include("funcs/adminfuncs.php");
+    include("funcs/dbconnect.php");
     $hostName = "localhost";
     $userName = "root";
-    $password = "testforit223";
+    $password = "";
     $databaseName = "movieworld";
     $db = retrieveDB($hostName, $userName, $password, $databaseName);
     $mcolumns = retrieveColumnsFromTable($db, "movies");
