@@ -1,12 +1,8 @@
 body {
   background-color: #f4f4f4;
-  background-image: url("../images/back.jpg");
   height: 100%;
   width: 100%;
   margin: 0%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   font-family: Arial, sans-serif;
 }
 .formflex {
@@ -14,6 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+
 }
 .formwrap {
   flex: auto;
@@ -73,4 +70,25 @@ button:hover {
 }
 input[type="radio"] {
   accent-color: rgb(255, 0, 200);
+}
+.video{
+  width:100%;
+  height:100vh;
+  background-image:linear-gradient(rgb(127, 117, 117));
+  background-position: center;
+  background-size: center;
+}
+
+.video video{
+  position: absolute;
+  right:0;
+  bottom:0;
+  z-index:-1;
+}
+@media(min-aspect-ratio:16/9){
+  .video video{
+    width: 100%;
+    height: auto;
+
+  }
 }
