@@ -1,20 +1,23 @@
 <?php
 session_start();
+if (!isset($_SESSION['email'])) {
+    header("Location: index.php");
+}
 $hostname = "localhost";
 $username = "root";
-$password = "";
-$dbname= "test_db";
+$password = "testforit223";
+$dbname = "test_db";
 
 // Create connection
 $conn = new mysqli($hostname, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
-    $sql = "SELECT id FROM users";
-    $query= mysqli_query($conn,$sql);
-    $row= mysqli_fetch_assoc($query);
+$sql = "SELECT id FROM users";
+$query = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,9 +30,11 @@ if ($conn->connect_error) {
     <script src="https://kit.fontawesome.com/5658c860c9.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>User profile</title>
 </head>
+
 <body>
     <h2 class="title">Movies <span>World</span></h2>
     <?php
@@ -43,10 +48,10 @@ if ($conn->connect_error) {
         </div>
 
         <div class="data">
-        <h2>User Profile</h2>
-                <br>
+            <h2>User Profile</h2>
+            <br>
             <div class="content">
-              
+
                 <h4>User Name:</h4>
                 <p>
                     <?php echo $_SESSION['name']; ?>
@@ -55,18 +60,18 @@ if ($conn->connect_error) {
                 <br>
                 <h4> ID:</h4>
                 <p>
-                   <?php  $_SESSION['id'] = $row['id'];
-                       print_r($_SESSION['id']); ?>
+                    <?php $_SESSION['id'] = $row['id'];
+                    print_r($_SESSION['id']); ?>
                 </p>
                 <hr>
                 <br>
-                
+
                 <h3><a href="logout.php" class="logout">Logout</a></h3>
             </div>
-            
+
         </div>
     </div>
-   
+
 </body>
 
 </html>
