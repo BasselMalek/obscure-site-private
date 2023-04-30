@@ -36,7 +36,7 @@ table.wd-table {
   background-color: #333333;
   border-collapse: collapse;
   border-width: 2px;
-  border-color: #f859e3;
+  border-color: white;
   border-style: solid;
   color: #ffffff;
 }
@@ -44,16 +44,16 @@ table.wd-table {
 table.wd-table td,
 table.wd-table th {
   border-width: 2px;
-  border-color: #f859e3;
+  border-color: white;
   border-style: solid;
   padding: 5px;
 }
 
 table.wd-table thead {
-  background-color: #bd10c9;
+  background-color:white;
 }
 
 .table-header {
   padding-bottom: 5px;
-  color: #ffffff;
+  color:#bd10c9;
 }

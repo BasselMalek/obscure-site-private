@@ -1,4 +1,5 @@
 <?php
+session_start();
 $hostname = "localhost";
 $username = "root";
 $password = "";
@@ -11,9 +12,9 @@ $conn = new mysqli($hostname, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-    $sql = "SELECT * FROM users";
+    $sql = "SELECT id FROM users";
     $query= mysqli_query($conn,$sql);
-    $result= mysqli_fetch_assoc($query);
+    $row= mysqli_fetch_assoc($query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +34,6 @@ if ($conn->connect_error) {
     <h2 class="title">Movies <span>World</span></h2>
     <?php
     include("funcs/dbconnect.php");
-    session_start();
     ?>
     <div class="whole_page">
         <div class="profile_icon">
@@ -55,15 +55,11 @@ if ($conn->connect_error) {
                 <br>
                 <h4> ID:</h4>
                 <p>
-                   <?php  echo $result['id'];  ?>
+                   <?php  $_SESSION['id'] = $row['id'];
+                       print_r($_SESSION['id']); ?>
                 </p>
                 <hr>
                 <br>
-                <h4> E-mail:</h4>
-                <p>
-                  a@aa
-                </p>
-                <hr>
                 
                 <h3><a href="logout.php" class="logout">Logout</a></h3>
             </div>
