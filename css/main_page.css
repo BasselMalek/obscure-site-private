@@ -108,6 +108,7 @@ body {
   width: 250px;
   height: 400px;
   object-fit: cover;
+  filter: drop-shadow(1px 1px 5px rgba(255, 0, 250, 0.3));
 }
 .gui-card__details {
   position: absolute;
