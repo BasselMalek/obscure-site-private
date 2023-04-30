@@ -10,13 +10,12 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-
 }
 .formwrap {
   flex: auto;
 }
 .login-form {
-  width: 300px;
+  width: 330px;
   margin: auto;
   background-color: white;
   padding: 20px;
@@ -28,8 +27,8 @@ body {
 input[type="password"],
 input[type="email"] {
   width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 11px 20px;
+  margin: 7px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;

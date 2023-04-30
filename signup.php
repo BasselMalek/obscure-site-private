@@ -13,7 +13,7 @@
     <video autoplay muted loop plays-inline>
         <source src="./video/cinema.mp4" type="video/mp4">
     </video>
-        <div class="content">
+    <div class="content">
     <div class="formflex">
         <div class="formwrap">
             <form class="login-form" action="signup-check.php" method="post">
