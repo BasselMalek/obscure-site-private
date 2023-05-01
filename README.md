@@ -1,6 +1,6 @@
 # Movies World
 
-This our team's humble project to graduate IT223.
+A team project using HTML/CSS/JS and PHP to create a movie/tv info website.
 
 ## Team members
 
