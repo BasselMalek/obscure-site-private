@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
-body {
+  body {
     background-image: url("../images/login_blurred_bg.jpg");
     height: 100%;
     width: 100%;
@@ -17,8 +17,8 @@ body {
   }
 .title{
     color:white;
-    background-color: #111111d7;
-    padding:6px;
+    background-color: rgba(0, 0, 0, 0.893);
+    padding:9px;
   }
   span{
     color:#cc00a0ff;
@@ -37,10 +37,8 @@ body {
   }
 .data{
     width:70%;
-    height:85.5vh;
-    background-color: #111111bd;
-    padding: 20px 35px;
-    margin:23px;
+    background-color: #11111199;
+    padding: 25px;
   }
 .button-solid {
     border: none;
@@ -51,27 +49,15 @@ body {
     text-align:center;
     margin:40px;
     padding:10px;
-    float:center;
 }
 button-solid:focus {
- border: none;
- outline: none;
-}
-.use h2{
-  text-align:center;
-}
-.use
-{
-  background-color:white;
-  color:#cc00a0ff;
- width:180px;
- padding:7px;
- border-radius: 15px;
+    border: none;
+    outline: none;
 }
 .content
 {
-  margin:15px;
-  padding:20px;
+    margin:45px;
+    padding:10px;
 }
 .logout{
    color:white;
@@ -81,37 +67,14 @@ button-solid:focus {
    right: 0;
    margin: 30px;
    padding: 15px;
-   border-radius: 17px;
+   border-radius: 13px;
    background-color:#cc00a0ff;
 }
 h4{
-  margin: 15px 0px;
+    margin: 15px 0px;
 }
 p{
-  margin:15px;
-}/*
-button{
-  background-color: #cc00a0ff;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius:15px;
-  font-size: 14px;
-  margin: 2px;
-  padding:10px;
-}
-input[type=file] {
-  width: 400px;
-  padding: 10px 20px;
-  margin: 6px 0;
-  box-sizing: border-box;
-  background-color: white ;
-  border:none;
-  border-radius: 15px;
-  color:#cc00a0ff;
+    margin:15px;
 }
 input::file-selector-button{
   color:#cc00a0ff;

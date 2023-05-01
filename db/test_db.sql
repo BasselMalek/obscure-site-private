@@ -4,7 +4,8 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-
+CREATE DATABASE test_db;
+USE test_db;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,

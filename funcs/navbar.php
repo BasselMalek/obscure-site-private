@@ -173,7 +173,7 @@ function generateNav($mode = "raw", $pic_url = "", $header = "", $flavor = "")
                 </a>';
     if ($mode == "full") {
         echo '<div class="search-bar">
-                    <form action="views/search.php" method="POST"> 
+                    <form action="search.php" method="POST"> 
                          <i class="fa-solid fa-magnifying-glass fa-xl"></i> 
                          <input type="text" name="search" class="search" >
                          <button type="submit"  name="submit-search" class="submitse"> </button>

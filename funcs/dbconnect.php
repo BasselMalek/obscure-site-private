@@ -10,7 +10,5 @@ function retrieveDB($hostName, $userName, $password, $databaseName)
 $hostName = "localhost";
 $userName = "root";
 $password = "";
-$databaseName = "movieworld";
-$db = retrieveDB($hostName, $userName, $password, $databaseName);
-
 ?>
+
