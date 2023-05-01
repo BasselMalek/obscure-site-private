@@ -1,0 +1,24 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+CREATE TABLE `my_images` (
+  `id` int(11) NOT NULL,
+  `image_url` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `my_images` (`id`, `image_url`) VALUES
+(8, 'IMG-5f8954bd209a92.78214246.jpg'),
+(9, 'IMG-5f8954caa02539.76436861.jpg');
+
+
+ALTER TABLE `my_images`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `my_images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
+

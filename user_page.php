@@ -43,7 +43,10 @@ if ($conn->connect_error) {
         </div>
 
         <div class="data">
-        <h2>User Profile</h2>
+        <div class="use">
+            <h2>User Profile</h2>
+        </div>
+            <br>
                 <br>
             <div class="content">
               
@@ -59,6 +62,7 @@ if ($conn->connect_error) {
                        print_r($_SESSION['id']); ?>
                 </p>
                 <hr>
+                <br>
                 <br>
                 
                 <h3><a href="logout.php" class="logout">Logout</a></h3>
