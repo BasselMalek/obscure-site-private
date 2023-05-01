@@ -2,7 +2,7 @@ CREATE DATABASE feedback_db;
 USE feedback_db;
 
 CREATE TABLE feedback(
-    id  int(11) NOT NULL AUTO_INCREMENT,
+    id  int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name varchar(45) NOT NULL,
     email varchar(255) NOT NULL,
     message varchar(4000) NOT NULL
