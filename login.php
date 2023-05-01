@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("funcs/dbconnect.php");
-$conn = retrievedb($hostName, $userName, $password, "test_tb");
+$conn = retrievedb($hostName, $userName, $password, "test_db");
 
 if (isset($_POST['uname']) && isset($_POST['password'])) {
 

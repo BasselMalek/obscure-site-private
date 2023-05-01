@@ -44,8 +44,8 @@ if (isset($_SESSION['name'])) {
                         <input type="password" name="password" placeholder="Password"><br>
 
                         <button type="submit">Login</button>
-                        <a href="signup.php" class="reg"> Don't have acount ? register first !</a>
-                        <a href="main_page.php" class="reg"> continue as Guest</a>
+                        <a href="signup.php" class="reg"> Don't have an account? Register Here!</a>
+                        <a href="main_page.php" class="reg"> Continue as a Guest</a>
                     </form>
                 </div>
             </div>

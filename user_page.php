@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['email'])) {
+if (!isset($_SESSION['user_name'])) {
     header("Location: index.php");
 }
 if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == 'admin') {
@@ -8,7 +8,7 @@ if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == 'admin') {
 
 }
 include("funcs/dbconnect.php");
-$conn = retrievedb($hostName, $userName, $password, "test_tb");
+$conn = retrievedb($hostName, $userName, $password, "test_db");
 
 // Check connection
 if ($conn->connect_error) {
@@ -35,7 +35,7 @@ $row = mysqli_fetch_assoc($query);
 </head>
 
 <body>
-    <?php generateNav(); ?>
+    <h2 class="title">Movies <span>World</span></h2>
     <div class="whole_page">
         <div class="profile_icon">
             <form action="user_page.php">
