@@ -15,10 +15,10 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-.title{
+  .title{
     color:white;
-    background-color: rgba(0, 0, 0, 0.893);
-    padding:9px;
+    background-color: #111111d7;
+    padding:6px;
   }
   span{
     color:#cc00a0ff;
@@ -35,10 +35,12 @@
     background-color:#11111199;
     min-height: 91.8vh;
   }
-.data{
+  .data{
     width:70%;
-    background-color: #11111199;
-    padding: 25px;
+    height:85.5vh;
+    background-color: #111111bd;
+    padding: 20px 35px;
+    margin:23px;
   }
 .button-solid {
     border: none;
@@ -51,13 +53,25 @@
     padding:10px;
 }
 button-solid:focus {
-    border: none;
-    outline: none;
+border: none;
+outline: none;
 }
+use h2{
+  text-align:center;
+}
+.use
+{
+  background-color:white;
+  color:#cc00a0ff;
+ width:180px;
+ padding:7px;
+ border-radius: 15px;
+}
+
 .content
 {
-    margin:45px;
-    padding:10px;
+  margin:15px;
+  padding:20px;
 }
 .logout{
    color:white;
@@ -65,9 +79,9 @@ button-solid:focus {
    position: fixed;
    bottom: 0;
    right: 0;
-   margin: 30px;
+   margin: 35px;
    padding: 15px;
-   border-radius: 13px;
+   border-radius: 17px;
    background-color:#cc00a0ff;
 }
 h4{
@@ -76,11 +90,3 @@ h4{
 p{
     margin:15px;
 }
-input::file-selector-button{
-  color:#cc00a0ff;
-  width:120px;
-  border:none;
-  background-color:white;
-  font-weight:bold;
-  font-size: 17px;
-}*/
