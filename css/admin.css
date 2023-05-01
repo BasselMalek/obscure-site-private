@@ -28,12 +28,12 @@ body {
   margin: 10px;
   padding: 20px;
   border-radius: 10px;
-  background-color: #333333;
+  background-color: #222222;
 }
 
 table.wd-table {
   width: 100%;
-  background-color: #333333;
+  background-color: #222222;
   border-collapse: collapse;
   border-width: 2px;
   border-color: white;
@@ -49,11 +49,19 @@ table.wd-table th {
   padding: 5px;
 }
 
-table.wd-table thead {
-  background-color:white;
-}
-
 .table-header {
   padding-bottom: 5px;
-  color:#bd10c9;
+  color: white;
+}
+
+.logout {
+  color: white;
+  text-decoration: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  padding: 15px;
+  border-radius: 13px;
+  background-color: #cc00a0ff;
 }

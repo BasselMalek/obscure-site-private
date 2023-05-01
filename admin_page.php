@@ -13,18 +13,29 @@
 
     <?php
     include("funcs/navbar.php");
-    generateNav("full", "images/placeholder.jpg", "Huh", "flavor");
+    generateNav();
     include("funcs/adminfuncs.php");
     include("funcs/dbconnect.php");
-    $hostName = "localhost";
-    $userName = "root";
-    $password = "";
-    $databaseName = "movieworld";
-    $db = retrieveDB($hostName, $userName, $password, $databaseName);
-    $mcolumns = retrieveColumnsFromTable($db, "movies");
-    $mdata = rertieveTableContent($db, "movies", $mcolumns);
-    $scolumns = retrieveColumnsFromTable($db, "series");
-    $sdata = rertieveTableContent($db, "series", $scolumns);
+
+    $mdb = retrievedb($hostName, $userName, $password, "movieworld");
+    $udb = retrievedb($hostName, $userName, $password, "test_db");
+    $fdb = retrievedb($hostName, $userName, $password, "feedback_db");
+
+    $mcolumns = retrieveColumnsFromTable($mdb, "movies");
+    unset($mcolumns[7]);
+    $mcolumns = array_values($mcolumns);
+    $mdata = rertieveTableContent($mdb, "movies", $mcolumns);
+
+    $scolumns = retrieveColumnsFromTable($mdb, "series");
+    unset($scolumns[7]);
+    $scolumns = array_values($scolumns);
+    $sdata = rertieveTableContent($mdb, "series", $scolumns);
+
+    $ucolumns = retrieveColumnsFromTable($udb, "users");
+    $udata = rertieveTableContent($udb, "users", $ucolumns);
+
+    $fcolumns = retrieveColumnsFromTable($fdb, "feedback");
+    $fdata = rertieveTableContent($fdb, "feedback", $fcolumns);
     ?>
 
     <div class="main-container">
@@ -32,7 +43,7 @@
             <h1 class="table-header">Movies</h1>
             <table class="wd-table">
                 <?php
-                displayTableData($mdata, $mcolumns);
+                displayTableData($mdata, $mcolumns, 'E');
                 ?>
             </table>
         </div>
@@ -40,10 +51,27 @@
             <table class="wd-table">
                 <h1 class="table-header">TV Shows</h1>
                 <?php
-                displayTableData($sdata, $scolumns);
+                displayTableData($sdata, $scolumns, 'E');
                 ?>
             </table>
         </div>
+        <div class="control-pane">
+            <h1 class="table-header">Users</h1>
+            <table class="wd-table">
+                <?php
+                displayTableData($udata, $ucolumns);
+                ?>
+            </table>
+        </div>
+        <div class="control-pane">
+            <h1 class="table-header">Feedback</h1>
+            <table class="wd-table">
+                <?php
+                displayTableData($fdata, $fcolumns);
+                ?>
+            </table>
+        </div>
+        <h3><a href="logout.php" class="logout">Logout</a></h3>
     </div>
 </body>
 

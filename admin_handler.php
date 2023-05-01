@@ -1,11 +1,12 @@
 <?php
 include("funcs/adminfuncs.php");
 include("funcs/navbar.php");
-$hostName = "localhost";
-$userName = "root";
-$password = "";
-$databaseName = "movieworld";
-$db = retrieveDB($hostName, $userName, $password, $databaseName);
+include("funcs/dbconnect.php");
+
+$mdb = retrievedb($hostName, $userName, $password, "movieworld");
+$udb = retrievedb($hostName, $userName, $password, "test_db");
+$fdb = retrievedb($hostName, $userName, $password, "feedback_db");
+
 end($_POST);
 $temp = key($_POST);
 switch ($temp) {
@@ -27,3 +28,4 @@ switch ($temp) {
         break;
 }
 ?>
+

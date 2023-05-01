@@ -22,7 +22,7 @@ function rertieveTableContent($db, $table_name, $columns)
     } else {
 
         $columnName = implode(", ", $columns);
-        $query = "SELECT " . $columnName . " FROM " . $table_name . " ORDER BY ID";
+        $query = "SELECT " . $columnName . " FROM " . $table_name;
         $result = $db->query($query);
         $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
         $output = $row;
@@ -30,7 +30,7 @@ function rertieveTableContent($db, $table_name, $columns)
     return $output;
 }
 
-function displayTableData($table_data, $columns)
+function displayTableData($table_data, $columns, $flag = 'U')
 {
     $clcount = 0;
     echo '<thead><tr>';
@@ -40,25 +40,31 @@ function displayTableData($table_data, $columns)
         echo '</th>';
         $clcount++;
     }
-    echo '<th>Edit</th>';
-    $clcount++;
+    if ($flag == 'E') {
+        echo '<th>Edit</th>';
+        $clcount++;
+    }
     echo '</tr></thead><tbody>';
     foreach ($table_data as $element) {
         echo '<tr>';
         foreach ($element as $key => $value) {
             echo '<td>' . $value . '</td>';
         }
-        echo '<td><form action="/admin_handler.php" method="post">
-        <button type="submit" class="button" name="delete" value=' . $element['id'] . '>Delete</button></td></form>';
-        echo '</tr>';
+        if ($flag == 'E') {
+            echo '<td><form action="/admin_handler.php" method="post">
+            <button type="submit" class="button" name="delete" value=' . $element['id'] . '>Delete</button></td></form>';
+            echo '</tr>';
+        }
     }
-    echo '<tr><form action="/admin_handler.php" method="post">';
-    for ($i = 0; $i < $clcount - 1; $i++) {
-        echo '<td> <input type="text" name="add' . $columns[$i] . '"
+    if ($flag == 'E') {
+        echo '<tr><form action="/admin_handler.php" method="post">';
+        for ($i = 0; $i < $clcount - 1; $i++) {
+            echo '<td> <input type="text" name="add' . $columns[$i] . '"
         class="text" /></td>';
+        }
+        echo '<td><button type="submit" class="button" name="add" value=' . $element['id'] . '>Add</button></td></form></tr>';
+        echo '</tbody>';
     }
-    echo '<td><button type="submit" class="button" name="add" value=' . $element['id'] . '>Add</button></td></form></tr>';
-    echo '</tbody>';
 }
 
 function deleteRow($db, $table_name, $ID)
@@ -86,3 +92,4 @@ function insertRow($db, $table_name, $data)
     $result = $db->query($que);
 }
 ?>
+
