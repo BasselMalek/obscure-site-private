@@ -15,6 +15,7 @@
 <body>
     <?php
     include("funcs/dbconnect.php");
+    $db = retrievedb($hostName, $userName, $password, "movieworld");
     include("funcs/contentretrieval.php");
     include("funcs/navbar.php");
     generateNav("full", "images/tv.jpg", "TV Gallery", "These days, the small screen has some very big things to offer.

@@ -2,6 +2,7 @@
 include("funcs/dbconnect.php");
 include("funcs/navbar.php");
 include("funcs/contentretrieval.php");
+$db = retrievedb($hostName, $userName, $password, "movieworld");
 $data = retreieveFullInfo($db, $_GET["tb"], $_GET["ID"]);
 
 echo '
@@ -38,7 +39,7 @@ echo '<div class="main">
             <div class="details">
                 <h1 class="main-title">' . $data['title'] . '</h1>
                 <p class="aux-details">' . $data['release_year'] . ' • ' . $data['genere'] . ' <br> ' . $data['rating'] . '/10⭐</p>
-                <p class="disc">' . str_replace("\"", "'", $data['story_Line']) . '</p>
+                <p class="disc">' . str_replace("\"", "'", $data['story_line']) . '</p>
                 <br><br>
                 <p class="cast">';
 if ($_GET['tb'] == "movies") {

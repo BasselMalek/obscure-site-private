@@ -15,6 +15,7 @@
     <?php
     session_start();
     include('funcs/dbconnect.php');
+    $db = retrievedb($hostName, $userName, $password, "movieworld");
     include("funcs/navbar.php");
     generateNav();
     ?>

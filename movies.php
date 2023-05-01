@@ -15,6 +15,7 @@
 <body>
     <?php
     include("funcs/dbconnect.php");
+    $db = retrievedb($hostName, $userName, $password, "movieworld");
     include("funcs/navbar.php");
     include("funcs/contentretrieval.php");
     generateNav("full", "images/movies.jpg", "Movies Gallery", "Movies move us like nothing else can,

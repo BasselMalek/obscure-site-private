@@ -9,7 +9,7 @@ CREATE TABLE movies (
    release_year int(11) NOT NULL,
    genere varchar(45) NOT NULL,
    rating float,
-   story_Line varchar(4000) NOT NULL,
+   story_line varchar(4000) NOT NULL,
    coverimage varchar(12) NOT NULL
 );
 
@@ -20,8 +20,8 @@ CREATE TABLE series (
    actors varchar(255) NOT NULL,
    release_year int(11) NOT NULL,
    genere varchar(45) NOT NULL,
-   story_Line varchar(4000) NOT NULL,
    rating float,
+   story_line varchar(4000) NOT NULL,
    coverimage varchar(12) NOT NULL
 );
 

@@ -3,13 +3,12 @@ session_start();
 if (!isset($_SESSION['email'])) {
     header("Location: index.php");
 }
-$hostname = "localhost";
-$username = "root";
-$password = "testforit223";
-$dbname = "test_db";
+if (isset($_SESSION['user_name']) && $_SESSION['user_name'] == 'admin') {
+    header("Location: admin_page.php");
 
-// Create connection
-$conn = new mysqli($hostname, $username, $password, $dbname);
+}
+include("funcs/dbconnect.php");
+$conn = retrievedb($hostName, $userName, $password, "test_tb");
 
 // Check connection
 if ($conn->connect_error) {
@@ -36,10 +35,7 @@ $row = mysqli_fetch_assoc($query);
 </head>
 
 <body>
-    <h2 class="title">Movies <span>World</span></h2>
-    <?php
-    include("funcs/dbconnect.php");
-    ?>
+    <?php generateNav(); ?>
     <div class="whole_page">
         <div class="profile_icon">
             <form action="user_page.php">
