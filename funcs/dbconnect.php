@@ -9,6 +9,6 @@ function retrieveDB($hostName, $userName, $password, $databaseName)
 
 $hostName = "localhost";
 $userName = "root";
-$password = "";
+$password = "testforit223";
 ?>
 

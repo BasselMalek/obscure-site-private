@@ -28,8 +28,11 @@
     $message = $_POST["message"];
 
     $sql = "INSERT INTO feedback (name, email, message) VALUES ('$name', '$email', '$message')";
+    $result = $conn->query($sql);
+
 
   }
+
 
   ?>
   <div class="formflex">
